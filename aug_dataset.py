@@ -280,7 +280,7 @@ def main():
     with open("global.config", 'r') as f:
         configs_dict = json.load(f)
 
-    args.task_name = configs_dict.get("dataset")
+    # args.task_name = configs_dict.get("dataset")
     args.output_dir = args.output_dir + '_{}_{}_{}_{}'.format(args.sample_num, args.sample_ratio, args.gpu, args.temp)
     print(args)
     run_aug(args, save_every_epoch=False)
