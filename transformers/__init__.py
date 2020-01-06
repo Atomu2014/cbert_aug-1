@@ -19,24 +19,24 @@ else:
 
 import logging
 
-from .configuration_albert import ALBERT_PRETRAINED_CONFIG_ARCHIVE_MAP, AlbertConfig
-from .configuration_auto import ALL_PRETRAINED_CONFIG_ARCHIVE_MAP, AutoConfig
+# from .configuration_albert import ALBERT_PRETRAINED_CONFIG_ARCHIVE_MAP, AlbertConfig
+# from .configuration_auto import ALL_PRETRAINED_CONFIG_ARCHIVE_MAP, AutoConfig
 from .configuration_bert import BERT_PRETRAINED_CONFIG_ARCHIVE_MAP, BertConfig
-from .configuration_camembert import CAMEMBERT_PRETRAINED_CONFIG_ARCHIVE_MAP, CamembertConfig
-from .configuration_ctrl import CTRL_PRETRAINED_CONFIG_ARCHIVE_MAP, CTRLConfig
-from .configuration_distilbert import DISTILBERT_PRETRAINED_CONFIG_ARCHIVE_MAP, DistilBertConfig
+# from .configuration_camembert import CAMEMBERT_PRETRAINED_CONFIG_ARCHIVE_MAP, CamembertConfig
+# from .configuration_ctrl import CTRL_PRETRAINED_CONFIG_ARCHIVE_MAP, CTRLConfig
+# from .configuration_distilbert import DISTILBERT_PRETRAINED_CONFIG_ARCHIVE_MAP, DistilBertConfig
 from .configuration_gpt2 import GPT2_PRETRAINED_CONFIG_ARCHIVE_MAP, GPT2Config
-from .configuration_mmbt import MMBTConfig
-from .configuration_openai import OPENAI_GPT_PRETRAINED_CONFIG_ARCHIVE_MAP, OpenAIGPTConfig
-from .configuration_roberta import ROBERTA_PRETRAINED_CONFIG_ARCHIVE_MAP, RobertaConfig
-from .configuration_t5 import T5_PRETRAINED_CONFIG_ARCHIVE_MAP, T5Config
-from .configuration_transfo_xl import TRANSFO_XL_PRETRAINED_CONFIG_ARCHIVE_MAP, TransfoXLConfig
+# from .configuration_mmbt import MMBTConfig
+# from .configuration_openai import OPENAI_GPT_PRETRAINED_CONFIG_ARCHIVE_MAP, OpenAIGPTConfig
+# from .configuration_roberta import ROBERTA_PRETRAINED_CONFIG_ARCHIVE_MAP, RobertaConfig
+# from .configuration_t5 import T5_PRETRAINED_CONFIG_ARCHIVE_MAP, T5Config
+# from .configuration_transfo_xl import TRANSFO_XL_PRETRAINED_CONFIG_ARCHIVE_MAP, TransfoXLConfig
 
 # Configurations
 from .configuration_utils import PretrainedConfig
-from .configuration_xlm import XLM_PRETRAINED_CONFIG_ARCHIVE_MAP, XLMConfig
-from .configuration_xlm_roberta import XLM_ROBERTA_PRETRAINED_CONFIG_ARCHIVE_MAP, XLMRobertaConfig
-from .configuration_xlnet import XLNET_PRETRAINED_CONFIG_ARCHIVE_MAP, XLNetConfig
+# from .configuration_xlm import XLM_PRETRAINED_CONFIG_ARCHIVE_MAP, XLMConfig
+# from .configuration_xlm_roberta import XLM_ROBERTA_PRETRAINED_CONFIG_ARCHIVE_MAP, XLMRobertaConfig
+# from .configuration_xlnet import XLNET_PRETRAINED_CONFIG_ARCHIVE_MAP, XLNetConfig
 from .data import (
     DataProcessor,
     InputExample,
@@ -101,24 +101,24 @@ from .pipelines import (
     TextClassificationPipeline,
     pipeline,
 )
-from .tokenization_albert import AlbertTokenizer
-from .tokenization_auto import AutoTokenizer
+# from .tokenization_albert import AlbertTokenizer
+# from .tokenization_auto import AutoTokenizer
 from .tokenization_bert import BasicTokenizer, BertTokenizer, BertTokenizerFast, WordpieceTokenizer
-from .tokenization_bert_japanese import BertJapaneseTokenizer, CharacterTokenizer, MecabTokenizer
-from .tokenization_camembert import CamembertTokenizer
-from .tokenization_ctrl import CTRLTokenizer
-from .tokenization_distilbert import DistilBertTokenizer
+# from .tokenization_bert_japanese import BertJapaneseTokenizer, CharacterTokenizer, MecabTokenizer
+# from .tokenization_camembert import CamembertTokenizer
+# from .tokenization_ctrl import CTRLTokenizer
+# from .tokenization_distilbert import DistilBertTokenizer
 from .tokenization_gpt2 import GPT2Tokenizer, GPT2TokenizerFast
-from .tokenization_openai import OpenAIGPTTokenizer
-from .tokenization_roberta import RobertaTokenizer
-from .tokenization_t5 import T5Tokenizer
-from .tokenization_transfo_xl import TransfoXLCorpus, TransfoXLTokenizer
+# from .tokenization_openai import OpenAIGPTTokenizer
+# from .tokenization_roberta import RobertaTokenizer
+# from .tokenization_t5 import T5Tokenizer
+# from .tokenization_transfo_xl import TransfoXLCorpus, TransfoXLTokenizer
 
 # Tokenizers
 from .tokenization_utils import PreTrainedTokenizer
-from .tokenization_xlm import XLMTokenizer
-from .tokenization_xlm_roberta import XLMRobertaTokenizer
-from .tokenization_xlnet import SPIECE_UNDERLINE, XLNetTokenizer
+# from .tokenization_xlm import XLMTokenizer
+# from .tokenization_xlm_roberta import XLMRobertaTokenizer
+# from .tokenization_xlnet import SPIECE_UNDERLINE, XLNetTokenizer
 
 
 logger = logging.getLogger(__name__)  # pylint: disable=invalid-name
@@ -131,14 +131,14 @@ if is_sklearn_available():
 # Modeling
 if is_torch_available():
     from .modeling_utils import PreTrainedModel, prune_layer, Conv1D
-    from .modeling_auto import (
-        AutoModel,
-        AutoModelForSequenceClassification,
-        AutoModelForQuestionAnswering,
-        AutoModelWithLMHead,
-        AutoModelForTokenClassification,
-        ALL_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
+    # from .modeling_auto import (
+    #     AutoModel,
+    #     AutoModelForSequenceClassification,
+    #     AutoModelForQuestionAnswering,
+    #     AutoModelWithLMHead,
+    #     AutoModelForTokenClassification,
+    #     ALL_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
 
     from .modeling_bert import (
         BertPreTrainedModel,
@@ -153,22 +153,22 @@ if is_torch_available():
         load_tf_weights_in_bert,
         BERT_PRETRAINED_MODEL_ARCHIVE_MAP,
     )
-    from .modeling_openai import (
-        OpenAIGPTPreTrainedModel,
-        OpenAIGPTModel,
-        OpenAIGPTLMHeadModel,
-        OpenAIGPTDoubleHeadsModel,
-        load_tf_weights_in_openai_gpt,
-        OPENAI_GPT_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-    from .modeling_transfo_xl import (
-        TransfoXLPreTrainedModel,
-        TransfoXLModel,
-        TransfoXLLMHeadModel,
-        AdaptiveEmbedding,
-        load_tf_weights_in_transfo_xl,
-        TRANSFO_XL_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
+    # from .modeling_openai import (
+    #     OpenAIGPTPreTrainedModel,
+    #     OpenAIGPTModel,
+    #     OpenAIGPTLMHeadModel,
+    #     OpenAIGPTDoubleHeadsModel,
+    #     load_tf_weights_in_openai_gpt,
+    #     OPENAI_GPT_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
+    # from .modeling_transfo_xl import (
+    #     TransfoXLPreTrainedModel,
+    #     TransfoXLModel,
+    #     TransfoXLLMHeadModel,
+    #     AdaptiveEmbedding,
+    #     load_tf_weights_in_transfo_xl,
+    #     TRANSFO_XL_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
     from .modeling_gpt2 import (
         GPT2PreTrainedModel,
         GPT2Model,
@@ -177,79 +177,79 @@ if is_torch_available():
         load_tf_weights_in_gpt2,
         GPT2_PRETRAINED_MODEL_ARCHIVE_MAP,
     )
-    from .modeling_ctrl import CTRLPreTrainedModel, CTRLModel, CTRLLMHeadModel, CTRL_PRETRAINED_MODEL_ARCHIVE_MAP
-    from .modeling_xlnet import (
-        XLNetPreTrainedModel,
-        XLNetModel,
-        XLNetLMHeadModel,
-        XLNetForSequenceClassification,
-        XLNetForTokenClassification,
-        XLNetForMultipleChoice,
-        XLNetForQuestionAnsweringSimple,
-        XLNetForQuestionAnswering,
-        load_tf_weights_in_xlnet,
-        XLNET_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-    from .modeling_xlm import (
-        XLMPreTrainedModel,
-        XLMModel,
-        XLMWithLMHeadModel,
-        XLMForSequenceClassification,
-        XLMForQuestionAnswering,
-        XLMForQuestionAnsweringSimple,
-        XLM_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-    from .modeling_roberta import (
-        RobertaForMaskedLM,
-        RobertaModel,
-        RobertaForSequenceClassification,
-        RobertaForMultipleChoice,
-        RobertaForTokenClassification,
-        RobertaForQuestionAnswering,
-        ROBERTA_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-    from .modeling_distilbert import (
-        DistilBertPreTrainedModel,
-        DistilBertForMaskedLM,
-        DistilBertModel,
-        DistilBertForSequenceClassification,
-        DistilBertForQuestionAnswering,
-        DistilBertForTokenClassification,
-        DISTILBERT_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-    from .modeling_camembert import (
-        CamembertForMaskedLM,
-        CamembertModel,
-        CamembertForSequenceClassification,
-        CamembertForMultipleChoice,
-        CamembertForTokenClassification,
-        CAMEMBERT_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-    from .modeling_encoder_decoder import PreTrainedEncoderDecoder, Model2Model
-    from .modeling_t5 import (
-        T5PreTrainedModel,
-        T5Model,
-        T5WithLMHeadModel,
-        load_tf_weights_in_t5,
-        T5_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-    from .modeling_albert import (
-        AlbertPreTrainedModel,
-        AlbertModel,
-        AlbertForMaskedLM,
-        AlbertForSequenceClassification,
-        AlbertForQuestionAnswering,
-        load_tf_weights_in_albert,
-        ALBERT_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-    from .modeling_xlm_roberta import (
-        XLMRobertaForMaskedLM,
-        XLMRobertaModel,
-        XLMRobertaForMultipleChoice,
-        XLMRobertaForSequenceClassification,
-        XLMRobertaForTokenClassification,
-    )
-    from .modeling_mmbt import ModalEmbeddings, MMBTModel, MMBTForClassification
+    # from .modeling_ctrl import CTRLPreTrainedModel, CTRLModel, CTRLLMHeadModel, CTRL_PRETRAINED_MODEL_ARCHIVE_MAP
+    # from .modeling_xlnet import (
+    #     XLNetPreTrainedModel,
+    #     XLNetModel,
+    #     XLNetLMHeadModel,
+    #     XLNetForSequenceClassification,
+    #     XLNetForTokenClassification,
+    #     XLNetForMultipleChoice,
+    #     XLNetForQuestionAnsweringSimple,
+    #     XLNetForQuestionAnswering,
+    #     load_tf_weights_in_xlnet,
+    #     XLNET_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
+    # from .modeling_xlm import (
+    #     XLMPreTrainedModel,
+    #     XLMModel,
+    #     XLMWithLMHeadModel,
+    #     XLMForSequenceClassification,
+    #     XLMForQuestionAnswering,
+    #     XLMForQuestionAnsweringSimple,
+    #     XLM_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
+    # from .modeling_roberta import (
+    #     RobertaForMaskedLM,
+    #     RobertaModel,
+    #     RobertaForSequenceClassification,
+    #     RobertaForMultipleChoice,
+    #     RobertaForTokenClassification,
+    #     RobertaForQuestionAnswering,
+    #     ROBERTA_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
+    # from .modeling_distilbert import (
+    #     DistilBertPreTrainedModel,
+    #     DistilBertForMaskedLM,
+    #     DistilBertModel,
+    #     DistilBertForSequenceClassification,
+    #     DistilBertForQuestionAnswering,
+    #     DistilBertForTokenClassification,
+    #     DISTILBERT_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
+    # from .modeling_camembert import (
+    #     CamembertForMaskedLM,
+    #     CamembertModel,
+    #     CamembertForSequenceClassification,
+    #     CamembertForMultipleChoice,
+    #     CamembertForTokenClassification,
+    #     CAMEMBERT_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
+    # from .modeling_encoder_decoder import PreTrainedEncoderDecoder, Model2Model
+    # from .modeling_t5 import (
+    #     T5PreTrainedModel,
+    #     T5Model,
+    #     T5WithLMHeadModel,
+    #     load_tf_weights_in_t5,
+    #     T5_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
+    # from .modeling_albert import (
+    #     AlbertPreTrainedModel,
+    #     AlbertModel,
+    #     AlbertForMaskedLM,
+    #     AlbertForSequenceClassification,
+    #     AlbertForQuestionAnswering,
+    #     load_tf_weights_in_albert,
+    #     ALBERT_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
+    # from .modeling_xlm_roberta import (
+    #     XLMRobertaForMaskedLM,
+    #     XLMRobertaModel,
+    #     XLMRobertaForMultipleChoice,
+    #     XLMRobertaForSequenceClassification,
+    #     XLMRobertaForTokenClassification,
+    # )
+    # from .modeling_mmbt import ModalEmbeddings, MMBTModel, MMBTForClassification
 
     # Optimization
     from .optimization import (
@@ -264,15 +264,15 @@ if is_torch_available():
 
 # TensorFlow
 if is_tf_available():
-    from .modeling_tf_utils import TFPreTrainedModel, TFSharedEmbeddings, TFSequenceSummary, shape_list
-    from .modeling_tf_auto import (
-        TFAutoModel,
-        TFAutoModelForSequenceClassification,
-        TFAutoModelForQuestionAnswering,
-        TFAutoModelWithLMHead,
-        TFAutoModelForTokenClassification,
-        TF_ALL_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
+    # from .modeling_tf_utils import TFPreTrainedModel, TFSharedEmbeddings, TFSequenceSummary, shape_list
+    # from .modeling_tf_auto import (
+    #     TFAutoModel,
+    #     TFAutoModelForSequenceClassification,
+    #     TFAutoModelForQuestionAnswering,
+    #     TFAutoModelWithLMHead,
+    #     TFAutoModelForTokenClassification,
+    #     TF_ALL_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
 
     from .modeling_tf_bert import (
         TFBertPreTrainedModel,
@@ -298,81 +298,81 @@ if is_tf_available():
         TF_GPT2_PRETRAINED_MODEL_ARCHIVE_MAP,
     )
 
-    from .modeling_tf_openai import (
-        TFOpenAIGPTPreTrainedModel,
-        TFOpenAIGPTMainLayer,
-        TFOpenAIGPTModel,
-        TFOpenAIGPTLMHeadModel,
-        TFOpenAIGPTDoubleHeadsModel,
-        TF_OPENAI_GPT_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-
-    from .modeling_tf_transfo_xl import (
-        TFTransfoXLPreTrainedModel,
-        TFTransfoXLMainLayer,
-        TFTransfoXLModel,
-        TFTransfoXLLMHeadModel,
-        TF_TRANSFO_XL_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-
-    from .modeling_tf_xlnet import (
-        TFXLNetPreTrainedModel,
-        TFXLNetMainLayer,
-        TFXLNetModel,
-        TFXLNetLMHeadModel,
-        TFXLNetForSequenceClassification,
-        TFXLNetForTokenClassification,
-        TFXLNetForQuestionAnsweringSimple,
-        TF_XLNET_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-
-    from .modeling_tf_xlm import (
-        TFXLMPreTrainedModel,
-        TFXLMMainLayer,
-        TFXLMModel,
-        TFXLMWithLMHeadModel,
-        TFXLMForSequenceClassification,
-        TFXLMForQuestionAnsweringSimple,
-        TF_XLM_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-
-    from .modeling_tf_roberta import (
-        TFRobertaPreTrainedModel,
-        TFRobertaMainLayer,
-        TFRobertaModel,
-        TFRobertaForMaskedLM,
-        TFRobertaForSequenceClassification,
-        TFRobertaForTokenClassification,
-        TF_ROBERTA_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-
-    from .modeling_tf_distilbert import (
-        TFDistilBertPreTrainedModel,
-        TFDistilBertMainLayer,
-        TFDistilBertModel,
-        TFDistilBertForMaskedLM,
-        TFDistilBertForSequenceClassification,
-        TFDistilBertForTokenClassification,
-        TFDistilBertForQuestionAnswering,
-        TF_DISTILBERT_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-
-    from .modeling_tf_ctrl import (
-        TFCTRLPreTrainedModel,
-        TFCTRLModel,
-        TFCTRLLMHeadModel,
-        TF_CTRL_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-
-    from .modeling_tf_albert import (
-        TFAlbertPreTrainedModel,
-        TFAlbertModel,
-        TFAlbertForMaskedLM,
-        TFAlbertForSequenceClassification,
-        TF_ALBERT_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-
-    from .modeling_tf_t5 import TFT5PreTrainedModel, TFT5Model, TFT5WithLMHeadModel, TF_T5_PRETRAINED_MODEL_ARCHIVE_MAP
+    # from .modeling_tf_openai import (
+    #     TFOpenAIGPTPreTrainedModel,
+    #     TFOpenAIGPTMainLayer,
+    #     TFOpenAIGPTModel,
+    #     TFOpenAIGPTLMHeadModel,
+    #     TFOpenAIGPTDoubleHeadsModel,
+    #     TF_OPENAI_GPT_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
+    #
+    # from .modeling_tf_transfo_xl import (
+    #     TFTransfoXLPreTrainedModel,
+    #     TFTransfoXLMainLayer,
+    #     TFTransfoXLModel,
+    #     TFTransfoXLLMHeadModel,
+    #     TF_TRANSFO_XL_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
+    #
+    # from .modeling_tf_xlnet import (
+    #     TFXLNetPreTrainedModel,
+    #     TFXLNetMainLayer,
+    #     TFXLNetModel,
+    #     TFXLNetLMHeadModel,
+    #     TFXLNetForSequenceClassification,
+    #     TFXLNetForTokenClassification,
+    #     TFXLNetForQuestionAnsweringSimple,
+    #     TF_XLNET_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
+    #
+    # from .modeling_tf_xlm import (
+    #     TFXLMPreTrainedModel,
+    #     TFXLMMainLayer,
+    #     TFXLMModel,
+    #     TFXLMWithLMHeadModel,
+    #     TFXLMForSequenceClassification,
+    #     TFXLMForQuestionAnsweringSimple,
+    #     TF_XLM_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
+    #
+    # from .modeling_tf_roberta import (
+    #     TFRobertaPreTrainedModel,
+    #     TFRobertaMainLayer,
+    #     TFRobertaModel,
+    #     TFRobertaForMaskedLM,
+    #     TFRobertaForSequenceClassification,
+    #     TFRobertaForTokenClassification,
+    #     TF_ROBERTA_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
+    #
+    # from .modeling_tf_distilbert import (
+    #     TFDistilBertPreTrainedModel,
+    #     TFDistilBertMainLayer,
+    #     TFDistilBertModel,
+    #     TFDistilBertForMaskedLM,
+    #     TFDistilBertForSequenceClassification,
+    #     TFDistilBertForTokenClassification,
+    #     TFDistilBertForQuestionAnswering,
+    #     TF_DISTILBERT_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
+    #
+    # from .modeling_tf_ctrl import (
+    #     TFCTRLPreTrainedModel,
+    #     TFCTRLModel,
+    #     TFCTRLLMHeadModel,
+    #     TF_CTRL_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
+    #
+    # from .modeling_tf_albert import (
+    #     TFAlbertPreTrainedModel,
+    #     TFAlbertModel,
+    #     TFAlbertForMaskedLM,
+    #     TFAlbertForSequenceClassification,
+    #     TF_ALBERT_PRETRAINED_MODEL_ARCHIVE_MAP,
+    # )
+    #
+    # from .modeling_tf_t5 import TFT5PreTrainedModel, TFT5Model, TFT5WithLMHeadModel, TF_T5_PRETRAINED_MODEL_ARCHIVE_MAP
 
     # Optimization
     from .optimization_tf import WarmUp, create_optimizer, AdamWeightDecay, GradientAccumulator
