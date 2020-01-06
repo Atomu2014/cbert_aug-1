@@ -75,7 +75,7 @@ from .file_utils import (
 )
 
 # Model Cards
-from .modelcard import ModelCard
+# from .modelcard import ModelCard
 
 # TF 2.0 <=> PyTorch conversion utilities
 from .modeling_tf_pytorch_utils import (
