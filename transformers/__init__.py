@@ -263,124 +263,124 @@ if is_torch_available():
 
 
 # TensorFlow
-if is_tf_available():
-    # from .modeling_tf_utils import TFPreTrainedModel, TFSharedEmbeddings, TFSequenceSummary, shape_list
-    # from .modeling_tf_auto import (
-    #     TFAutoModel,
-    #     TFAutoModelForSequenceClassification,
-    #     TFAutoModelForQuestionAnswering,
-    #     TFAutoModelWithLMHead,
-    #     TFAutoModelForTokenClassification,
-    #     TF_ALL_PRETRAINED_MODEL_ARCHIVE_MAP,
-    # )
-
-    from .modeling_tf_bert import (
-        TFBertPreTrainedModel,
-        TFBertMainLayer,
-        TFBertEmbeddings,
-        TFBertModel,
-        TFBertForPreTraining,
-        TFBertForMaskedLM,
-        TFBertForNextSentencePrediction,
-        TFBertForSequenceClassification,
-        TFBertForMultipleChoice,
-        TFBertForTokenClassification,
-        TFBertForQuestionAnswering,
-        TF_BERT_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-
-    from .modeling_tf_gpt2 import (
-        TFGPT2PreTrainedModel,
-        TFGPT2MainLayer,
-        TFGPT2Model,
-        TFGPT2LMHeadModel,
-        TFGPT2DoubleHeadsModel,
-        TF_GPT2_PRETRAINED_MODEL_ARCHIVE_MAP,
-    )
-
-    # from .modeling_tf_openai import (
-    #     TFOpenAIGPTPreTrainedModel,
-    #     TFOpenAIGPTMainLayer,
-    #     TFOpenAIGPTModel,
-    #     TFOpenAIGPTLMHeadModel,
-    #     TFOpenAIGPTDoubleHeadsModel,
-    #     TF_OPENAI_GPT_PRETRAINED_MODEL_ARCHIVE_MAP,
-    # )
-    #
-    # from .modeling_tf_transfo_xl import (
-    #     TFTransfoXLPreTrainedModel,
-    #     TFTransfoXLMainLayer,
-    #     TFTransfoXLModel,
-    #     TFTransfoXLLMHeadModel,
-    #     TF_TRANSFO_XL_PRETRAINED_MODEL_ARCHIVE_MAP,
-    # )
-    #
-    # from .modeling_tf_xlnet import (
-    #     TFXLNetPreTrainedModel,
-    #     TFXLNetMainLayer,
-    #     TFXLNetModel,
-    #     TFXLNetLMHeadModel,
-    #     TFXLNetForSequenceClassification,
-    #     TFXLNetForTokenClassification,
-    #     TFXLNetForQuestionAnsweringSimple,
-    #     TF_XLNET_PRETRAINED_MODEL_ARCHIVE_MAP,
-    # )
-    #
-    # from .modeling_tf_xlm import (
-    #     TFXLMPreTrainedModel,
-    #     TFXLMMainLayer,
-    #     TFXLMModel,
-    #     TFXLMWithLMHeadModel,
-    #     TFXLMForSequenceClassification,
-    #     TFXLMForQuestionAnsweringSimple,
-    #     TF_XLM_PRETRAINED_MODEL_ARCHIVE_MAP,
-    # )
-    #
-    # from .modeling_tf_roberta import (
-    #     TFRobertaPreTrainedModel,
-    #     TFRobertaMainLayer,
-    #     TFRobertaModel,
-    #     TFRobertaForMaskedLM,
-    #     TFRobertaForSequenceClassification,
-    #     TFRobertaForTokenClassification,
-    #     TF_ROBERTA_PRETRAINED_MODEL_ARCHIVE_MAP,
-    # )
-    #
-    # from .modeling_tf_distilbert import (
-    #     TFDistilBertPreTrainedModel,
-    #     TFDistilBertMainLayer,
-    #     TFDistilBertModel,
-    #     TFDistilBertForMaskedLM,
-    #     TFDistilBertForSequenceClassification,
-    #     TFDistilBertForTokenClassification,
-    #     TFDistilBertForQuestionAnswering,
-    #     TF_DISTILBERT_PRETRAINED_MODEL_ARCHIVE_MAP,
-    # )
-    #
-    # from .modeling_tf_ctrl import (
-    #     TFCTRLPreTrainedModel,
-    #     TFCTRLModel,
-    #     TFCTRLLMHeadModel,
-    #     TF_CTRL_PRETRAINED_MODEL_ARCHIVE_MAP,
-    # )
-    #
-    # from .modeling_tf_albert import (
-    #     TFAlbertPreTrainedModel,
-    #     TFAlbertModel,
-    #     TFAlbertForMaskedLM,
-    #     TFAlbertForSequenceClassification,
-    #     TF_ALBERT_PRETRAINED_MODEL_ARCHIVE_MAP,
-    # )
-    #
-    # from .modeling_tf_t5 import TFT5PreTrainedModel, TFT5Model, TFT5WithLMHeadModel, TF_T5_PRETRAINED_MODEL_ARCHIVE_MAP
-
-    # Optimization
-    from .optimization_tf import WarmUp, create_optimizer, AdamWeightDecay, GradientAccumulator
-
-
-if not is_tf_available() and not is_torch_available():
-    logger.warning(
-        "Neither PyTorch nor TensorFlow >= 2.0 have been found."
-        "Models won't be available and only tokenizers, configuration"
-        "and file/data utilities can be used."
-    )
+# if is_tf_available():
+#     # from .modeling_tf_utils import TFPreTrainedModel, TFSharedEmbeddings, TFSequenceSummary, shape_list
+#     # from .modeling_tf_auto import (
+#     #     TFAutoModel,
+#     #     TFAutoModelForSequenceClassification,
+#     #     TFAutoModelForQuestionAnswering,
+#     #     TFAutoModelWithLMHead,
+#     #     TFAutoModelForTokenClassification,
+#     #     TF_ALL_PRETRAINED_MODEL_ARCHIVE_MAP,
+#     # )
+#
+#     from .modeling_tf_bert import (
+#         TFBertPreTrainedModel,
+#         TFBertMainLayer,
+#         TFBertEmbeddings,
+#         TFBertModel,
+#         TFBertForPreTraining,
+#         TFBertForMaskedLM,
+#         TFBertForNextSentencePrediction,
+#         TFBertForSequenceClassification,
+#         TFBertForMultipleChoice,
+#         TFBertForTokenClassification,
+#         TFBertForQuestionAnswering,
+#         TF_BERT_PRETRAINED_MODEL_ARCHIVE_MAP,
+#     )
+#
+#     from .modeling_tf_gpt2 import (
+#         TFGPT2PreTrainedModel,
+#         TFGPT2MainLayer,
+#         TFGPT2Model,
+#         TFGPT2LMHeadModel,
+#         TFGPT2DoubleHeadsModel,
+#         TF_GPT2_PRETRAINED_MODEL_ARCHIVE_MAP,
+#     )
+#
+#     # from .modeling_tf_openai import (
+#     #     TFOpenAIGPTPreTrainedModel,
+#     #     TFOpenAIGPTMainLayer,
+#     #     TFOpenAIGPTModel,
+#     #     TFOpenAIGPTLMHeadModel,
+#     #     TFOpenAIGPTDoubleHeadsModel,
+#     #     TF_OPENAI_GPT_PRETRAINED_MODEL_ARCHIVE_MAP,
+#     # )
+#     #
+#     # from .modeling_tf_transfo_xl import (
+#     #     TFTransfoXLPreTrainedModel,
+#     #     TFTransfoXLMainLayer,
+#     #     TFTransfoXLModel,
+#     #     TFTransfoXLLMHeadModel,
+#     #     TF_TRANSFO_XL_PRETRAINED_MODEL_ARCHIVE_MAP,
+#     # )
+#     #
+#     # from .modeling_tf_xlnet import (
+#     #     TFXLNetPreTrainedModel,
+#     #     TFXLNetMainLayer,
+#     #     TFXLNetModel,
+#     #     TFXLNetLMHeadModel,
+#     #     TFXLNetForSequenceClassification,
+#     #     TFXLNetForTokenClassification,
+#     #     TFXLNetForQuestionAnsweringSimple,
+#     #     TF_XLNET_PRETRAINED_MODEL_ARCHIVE_MAP,
+#     # )
+#     #
+#     # from .modeling_tf_xlm import (
+#     #     TFXLMPreTrainedModel,
+#     #     TFXLMMainLayer,
+#     #     TFXLMModel,
+#     #     TFXLMWithLMHeadModel,
+#     #     TFXLMForSequenceClassification,
+#     #     TFXLMForQuestionAnsweringSimple,
+#     #     TF_XLM_PRETRAINED_MODEL_ARCHIVE_MAP,
+#     # )
+#     #
+#     # from .modeling_tf_roberta import (
+#     #     TFRobertaPreTrainedModel,
+#     #     TFRobertaMainLayer,
+#     #     TFRobertaModel,
+#     #     TFRobertaForMaskedLM,
+#     #     TFRobertaForSequenceClassification,
+#     #     TFRobertaForTokenClassification,
+#     #     TF_ROBERTA_PRETRAINED_MODEL_ARCHIVE_MAP,
+#     # )
+#     #
+#     # from .modeling_tf_distilbert import (
+#     #     TFDistilBertPreTrainedModel,
+#     #     TFDistilBertMainLayer,
+#     #     TFDistilBertModel,
+#     #     TFDistilBertForMaskedLM,
+#     #     TFDistilBertForSequenceClassification,
+#     #     TFDistilBertForTokenClassification,
+#     #     TFDistilBertForQuestionAnswering,
+#     #     TF_DISTILBERT_PRETRAINED_MODEL_ARCHIVE_MAP,
+#     # )
+#     #
+#     # from .modeling_tf_ctrl import (
+#     #     TFCTRLPreTrainedModel,
+#     #     TFCTRLModel,
+#     #     TFCTRLLMHeadModel,
+#     #     TF_CTRL_PRETRAINED_MODEL_ARCHIVE_MAP,
+#     # )
+#     #
+#     # from .modeling_tf_albert import (
+#     #     TFAlbertPreTrainedModel,
+#     #     TFAlbertModel,
+#     #     TFAlbertForMaskedLM,
+#     #     TFAlbertForSequenceClassification,
+#     #     TF_ALBERT_PRETRAINED_MODEL_ARCHIVE_MAP,
+#     # )
+#     #
+#     # from .modeling_tf_t5 import TFT5PreTrainedModel, TFT5Model, TFT5WithLMHeadModel, TF_T5_PRETRAINED_MODEL_ARCHIVE_MAP
+#
+#     # Optimization
+#     from .optimization_tf import WarmUp, create_optimizer, AdamWeightDecay, GradientAccumulator
+#
+#
+# if not is_tf_available() and not is_torch_available():
+#     logger.warning(
+#         "Neither PyTorch nor TensorFlow >= 2.0 have been found."
+#         "Models won't be available and only tokenizers, configuration"
+#         "and file/data utilities can be used."
+#     )

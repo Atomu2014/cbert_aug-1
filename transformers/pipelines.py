@@ -37,14 +37,14 @@ from .tokenization_bert import BasicTokenizer
 from .tokenization_utils import PreTrainedTokenizer
 
 
-if is_tf_available():
-    import tensorflow as tf
-    from .modeling_tf_auto import (
-        TFAutoModel,
-        TFAutoModelForSequenceClassification,
-        TFAutoModelForQuestionAnswering,
-        TFAutoModelForTokenClassification,
-    )
+# if is_tf_available():
+#     import tensorflow as tf
+#     from .modeling_tf_auto import (
+#         TFAutoModel,
+#         TFAutoModelForSequenceClassification,
+#         TFAutoModelForQuestionAnswering,
+#         TFAutoModelForTokenClassification,
+#     )
 
 if is_torch_available():
     import torch

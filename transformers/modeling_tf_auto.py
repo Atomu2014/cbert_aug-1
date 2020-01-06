@@ -34,14 +34,14 @@ from .configuration_auto import (
 #     TFAlbertForSequenceClassification,
 #     TFAlbertModel,
 # )
-from .modeling_tf_bert import (
-    TF_BERT_PRETRAINED_MODEL_ARCHIVE_MAP,
-    TFBertForMaskedLM,
-    TFBertForQuestionAnswering,
-    TFBertForSequenceClassification,
-    TFBertForTokenClassification,
-    TFBertModel,
-)
+# from .modeling_tf_bert import (
+#     TF_BERT_PRETRAINED_MODEL_ARCHIVE_MAP,
+#     TFBertForMaskedLM,
+#     TFBertForQuestionAnswering,
+#     TFBertForSequenceClassification,
+#     TFBertForTokenClassification,
+#     TFBertModel,
+# )
 # from .modeling_tf_ctrl import TF_CTRL_PRETRAINED_MODEL_ARCHIVE_MAP, TFCTRLLMHeadModel, TFCTRLModel
 # from .modeling_tf_distilbert import (
 #     TF_DISTILBERT_PRETRAINED_MODEL_ARCHIVE_MAP,
@@ -51,7 +51,7 @@ from .modeling_tf_bert import (
 #     TFDistilBertForTokenClassification,
 #     TFDistilBertModel,
 # )
-from .modeling_tf_gpt2 import TF_GPT2_PRETRAINED_MODEL_ARCHIVE_MAP, TFGPT2LMHeadModel, TFGPT2Model
+# from .modeling_tf_gpt2 import TF_GPT2_PRETRAINED_MODEL_ARCHIVE_MAP, TFGPT2LMHeadModel, TFGPT2Model
 # from .modeling_tf_openai import TF_OPENAI_GPT_PRETRAINED_MODEL_ARCHIVE_MAP, TFOpenAIGPTLMHeadModel, TFOpenAIGPTModel
 # from .modeling_tf_roberta import (
 #     TF_ROBERTA_PRETRAINED_MODEL_ARCHIVE_MAP,
