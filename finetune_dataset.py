@@ -14,7 +14,7 @@ from torch.utils.data.distributed import DistributedSampler
 
 from transformers.tokenization_bert import BertTokenizer
 from transformers.modeling_bert import BertForMaskedLM
-from transformers.optimization import BertAdam
+from transformers.optimization import AdamW, get_linear_schedule_with_warmup
 import train_text_classifier
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message)s',
@@ -340,12 +340,13 @@ def run_aug(args, save_every_epoch=False):
         {'params': [p for n, p in param_optimizer if any(nd in n for nd in no_decay)], 'weight_decay_rate': 0.0}
     ]
     t_total = num_train_steps
-    optimizer = BertAdam(optimizer_grouped_parameters,lr=args.learning_rate,
-                         warmup=args.warmup_proportion,t_total=t_total)
+    optimizer = AdamW(optimizer_grouped_parameters, lr=args.learning_rate)
+    scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=int(t_total * args.warmup_proportion),
+                                                num_training_steps=t_total)
 
     model.train()
 
-    save_model_dir = os.path.join(PYTORCH_PRETRAINED_BERT_CACHE, task_name)
+    save_model_dir = os.path.join('../transformers/', task_name)
     if not os.path.exists(save_model_dir):
         os.mkdir(save_model_dir)
     for e in trange(int(args.num_train_epochs), desc="Epoch"):
@@ -358,6 +359,7 @@ def run_aug(args, save_every_epoch=False):
             loss.backward()
             avg_loss += loss.item()
             optimizer.step()
+            scheduler.step()
             model.zero_grad()
             if (step + 1) % 50 == 0:
                 print("avg_loss: {}".format(avg_loss / 50))
