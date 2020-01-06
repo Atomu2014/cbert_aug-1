@@ -304,7 +304,7 @@ def run_aug(args, save_every_epoch=False):
     #train_examples.extend(dev_examples)
     
     # Prepare model
-    model = BertForMaskedLM.from_pretrained(args.bert_model, cache_dir='../transformers/')
+    model = BertForMaskedLM.from_pretrained(args.bert_model, cache_dir='models/')
 
     if task_name == 'stsa.fine':
         model.bert.embeddings.token_type_embeddings = torch.nn.Embedding(5, 768)
@@ -346,7 +346,7 @@ def run_aug(args, save_every_epoch=False):
 
     model.train()
 
-    save_model_dir = os.path.join('../transformers/', task_name)
+    save_model_dir = os.path.join('models/', task_name)
     if not os.path.exists(save_model_dir):
         os.mkdir(save_model_dir)
     for e in trange(int(args.num_train_epochs), desc="Epoch"):
