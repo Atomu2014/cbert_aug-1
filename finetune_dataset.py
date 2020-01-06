@@ -355,7 +355,7 @@ def run_aug(args, save_every_epoch=False):
         for step, batch in enumerate(train_dataloader):
             batch = tuple(t.cuda() for t in batch)
             _, input_ids, input_mask, segment_ids, masked_ids = batch
-            loss = model(input_ids=input_ids, attention_mask=input_mask, token_type_ids=segment_ids, masked_lm_labels=masked_ids)
+            loss = model(input_ids=input_ids, attention_mask=input_mask, token_type_ids=segment_ids, masked_lm_labels=masked_ids)[0]
             loss.backward()
             avg_loss += loss.item()
             optimizer.step()
