@@ -242,7 +242,7 @@ def main():
                         help="The output dir for augmented dataset")
     parser.add_argument("--bert_model", default="bert-base-uncased", type=str,
                         help="The path of pretrained bert model.")
-    parser.add_argument("--task_name",default="subj",type=str,
+    parser.add_argument("--task_name",default="stsa.binary",type=str,
                         help="The name of the task to train.")
     parser.add_argument("--max_seq_length", default=128, type=int,
                         help="The maximum total input sequence length after WordPiece tokenization. \n"
