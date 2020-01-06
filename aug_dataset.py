@@ -370,7 +370,7 @@ def run_aug(args, save_every_epoch=False):
             masked_idx = np.squeeze([np.random.randint(0, l, max(l//args.sample_ratio,1)) for l in input_lens])
             for ids, idx in zip(init_ids,masked_idx):
                 ids[idx] = MASK_id
-            predictions = model(init_ids, segment_ids, input_mask)
+            predictions = model(input_ids=init_ids, token_type_ids=segment_ids, attention_mask=input_mask)[0]
             predictions = torch.nn.functional.softmax(predictions/args.temp, dim=2)
             #ipdb.set_trace()
             for ids, idx, preds, seg in zip(init_ids, masked_idx, predictions, segment_ids):
