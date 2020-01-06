@@ -1,7 +1,3 @@
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-
 import csv
 import os
 import shutil
@@ -16,11 +12,10 @@ import torch
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler
 from torch.utils.data.distributed import DistributedSampler
 
-from pytorch_pretrained_bert.tokenization import BertTokenizer
-from pytorch_pretrained_bert.modeling import BertForMaskedLM
-from pytorch_pretrained_bert.optimization import BertAdam
+from transformers.tokenization_bert import BertTokenizer
+from transformers.modeling_bert import BertForMaskedLM
+from transformers.optimization import BertAdam
 import train_text_classifier
-PYTORCH_PRETRAINED_BERT_CACHE = .pytorch_pretrained_bert
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message)s',
                     datefmt='%m/%d/%Y %H:%M:%S',
@@ -309,7 +304,7 @@ def run_aug(args, save_every_epoch=False):
     #train_examples.extend(dev_examples)
     
     # Prepare model
-    model = BertForMaskedLM.from_pretrained(args.bert_model, cache_dir=PYTORCH_PRETRAINED_BERT_CACHE)
+    model = BertForMaskedLM.from_pretrained(args.bert_model, cache_dir='../transformers/')
 
     if task_name == 'stsa.fine':
         model.bert.embeddings.token_type_embeddings = torch.nn.Embedding(5, 768)
