@@ -14,15 +14,15 @@ import json
 import numpy as np
 import torch
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler
-from torch.utils.data.distributed import DistributedSampler
+# from torch.utils.data.distributed import DistributedSampler
 
-from pytorch_pretrained_bert.tokenization import BertTokenizer
-from pytorch_pretrained_bert.modeling import BertForMaskedLM
-from pytorch_pretrained_bert.optimization import BertAdam
-import ipdb
+from transformers.tokenization_bert import BertTokenizer
+# from transformers.modeling_bert import BertForMaskedLM
+# from transformers.optimization import AdamW
+# import ipdb
 import train_text_classifier
 
-PYTORCH_PRETRAINED_BERT_CACHE = ".pytorch_pretrained_bert"
+PYTORCH_PRETRAINED_BERT_CACHE = "models/"
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message)s',
                     datefmt='%m/%d/%Y %H:%M:%S',
                     level=logging.INFO)
@@ -147,7 +147,7 @@ def convert_examples_to_features(examples, label_list, max_seq_length, tokenizer
             segment_ids.append(segment_id)
         tokens.append("[SEP]")
         segment_ids.append(segment_id)
-        masked_lm_labels = [-1] * max_seq_length
+        masked_lm_labels = [-100] * max_seq_length
 
         cand_indexes = []
         for (i, token) in enumerate(tokens):
@@ -248,9 +248,9 @@ def main():
                         help="The output dir for augmented dataset")
     parser.add_argument("--bert_model", default="bert-base-uncased", type=str,
                         help="The path of pretrained bert model.")
-    parser.add_argument("--task_name",default="subj",type=str,
+    parser.add_argument("--task_name",default="stsa.binary",type=str,
                         help="The name of the task to train.")
-    parser.add_argument("--max_seq_length", default=64, type=int,
+    parser.add_argument("--max_seq_length", default=128, type=int,
                         help="The maximum total input sequence length after WordPiece tokenization. \n"
                              "Sequences longer than this will be truncated, and sequences shorter \n"
                              "than this will be padded.")
