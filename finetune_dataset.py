@@ -141,7 +141,7 @@ def convert_examples_to_features(examples, label_list, max_seq_length, tokenizer
                 segment_ids.append(segment_id)
             tokens.append("[SEP]")
             segment_ids.append(segment_id)
-            masked_lm_labels = [-1] * max_seq_length
+            masked_lm_labels = [-100] * max_seq_length
 
             cand_indexes = []
             for (i, token) in enumerate(tokens):
